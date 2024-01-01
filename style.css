@@ -27,6 +27,7 @@ background-color: blue;
 .button-style {
     background-color: rgb(168, 145, 145);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .main-div {
@@ -35,9 +36,7 @@ background-color: blue;
     padding: 18px;
     width: auto;
     height: 80px;
-    margin-top:
-
-     100px;
+    margin-top:100px;
 }
 
 
