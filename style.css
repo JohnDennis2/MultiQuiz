@@ -1,12 +1,22 @@
-body {
-
-    background-color: aquamarine;
+title.title-bar {
+    text-align: center;
+    background-color: antiquewhite;
+    color: blue;
     
 }
 
-div {
+body {
 
+    background-color: aquamarine;
+    border-radius: 12px;
     
+}
+
+div { background-color: azure;
+    text-align: center;
+    
+
+
 }
 
 button {
@@ -14,3 +24,11 @@ background-color: blue;
 
 }
 
+.button-style {
+    background-color: rgb(168, 145, 145);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main-div {
+    background-color: sandybrown;
+}
