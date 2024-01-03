@@ -10,10 +10,14 @@
 //write a new function that works after the game has ended.
 //the end function should be a promt where the user can enter their initials and their score is saved.
 
-const 
+const startButton = document.querySelector(".start-button");
+const questionSec = document.querySelector(".question-sec")
+const CorrectBox = document.querySelector(".correct-incorrect")
+const Timer = document.querySelector(".Timer")
+const HighScore = document.querySelector(".highscore")
 
-function startTimer() {
-    setTimeout(, 15000)
+function start () {
+    onclick.
 }
 
 let questions = [
