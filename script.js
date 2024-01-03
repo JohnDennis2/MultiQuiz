@@ -1,10 +1,10 @@
 //first create the HTML
 //create the start button
-//link the button to the javascript
+//link the start button to the javascript
 
-//when the start button is clicked a timer begins and questions start
-//link a funtion to start the timer in the timer div, that also removes the start div,
-//that also gets the questions into the question section.
+//we need a function, when the start button is clicked a timer begins and displays in the timer DIV
+//also when the start button is clicked, the start div is hidden, and the questions section is refreshed with
+//the first set of questions.
 
 //write the function that decides to either progress after a question is answered completely 
 //or when answered incompletely deducts time from the clock.
@@ -15,24 +15,15 @@
 //write a new function that works after the game has ended.
 //the end function should be a promt where the user can enter their initials and their score is saved.
 
-const startButton = document.querySelector(".start-button");
-const questionSec = document.querySelector(".question-sec")
-const CorrectBox = document.querySelector(".correct-incorrect")
-const Timer = document.querySelector(".Timer")
-const HighScore = document.querySelector(".highscore")
+const startButton = document.getElementById(".start-button");
+const questionSec = document.getElementById(".question-sec")
+const CorrectBox = document.getElementById(".correct-incorrect")
+const Timer = document.getElementById(".Timer")
+const HighScore = document.getElementById(".highscore")
 const Correct = "That's Right"
 const Incorrect = "Nope!"
 
-
-
-function start (){
-    alert("hello")
-}
-    
-    
-   
-
-
+onclick(ev: MouseEvent): 
 let questions = [
     {
         Number: 1
@@ -46,7 +37,7 @@ let questions = [
 
         ]
     }
-        {
+        ,{
             Number: 2
             ,question: "What is a P tag?",
             answer: "The paragraph element tag",
@@ -58,7 +49,7 @@ let questions = [
     
             ]
     }
-    {
+    ,{
         Number: 3
         ,question: "What is javascript?",
         answer: "A programming language",
@@ -71,3 +62,21 @@ let questions = [
         ]
     }
 ]
+document.getElementById("start-button").addEventListener("click", start);
+   start ()
+if { 
+   
+        
+    };
+
+else {
+
+
+}
+
+function UserQuestions = {
+    
+}
+
+
+start()
