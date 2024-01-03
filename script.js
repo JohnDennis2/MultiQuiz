@@ -15,15 +15,18 @@
 //write a new function that works after the game has ended.
 //the end function should be a promt where the user can enter their initials and their score is saved.
 
-const startButton = document.getElementById(".start-button");
-const questionSec = document.getElementById(".question-sec")
-const CorrectBox = document.getElementById(".correct-incorrect")
-const Timer = document.getElementById(".Timer")
-const HighScore = document.getElementById(".highscore")
-const Correct = "That's Right"
-const Incorrect = "Nope!"
+const startButton = document.getElementById("start-button");
+const questionSec = document.getElementById("question-sec")
+const CorrectBox = document.getElementById("correct-incorrect")
+const Timer = document.getElementById("Timer")
+const HighScore = document.getElementById("highscore")
+//const Correct = alert("That's Right")
+//const Incorrect = alert( "Nope!")
 
-onclick(ev: MouseEvent): 
+let timeLeft = 120; 
+let timerId; 
+let questionIndex = 0;
+ 
 let questions = [
     {
         Number: 1
@@ -62,21 +65,27 @@ let questions = [
         ]
     }
 ]
-document.getElementById("start-button").addEventListener("click", start);
-   start ()
-if { 
-   
-        
-    };
 
-else {
+ const oneSecondHandler = ()=> {
+     timeLeft--;
+     if (timeLeft<=0){
+        timeLeft = 0
+       endQuiz(); 
+     }
+     Timer.textContent = timeLeft;
 
+ }
 
+ function endQuiz() {
+  console.log ("end quiz")
+ }
+  const start = ()=> { 
+    console.log ("game is starting")
+    document.querySelector(".start-div").setAttribute("style","display:none")
+    //document.querySelector(".questions-sec").textContent = questions
+    //document.querySelector(".timer").textContent = setInterval
+    timerId = setInterval(oneSecondHandler, 1000);
+    Timer.textContent = timeLeft;
 }
-
-function UserQuestions = {
-    
-}
-
-
-start()
+   document.getElementById("start-button").addEventListener("click", start);
+ 
