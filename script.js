@@ -8,3 +8,4 @@
 //game over should also be reached if time runs out on the clock.
 //write a new function that works after the game has ended.
 //the end function should be a promt where the user can enter their initials and their score is saved.
+
