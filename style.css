@@ -14,11 +14,19 @@ body {
 
 div { background-color: azure;
     text-align: center;
-    
+    }
 
+.questions{
+
+background-color: lightslategrey;
+margin: 20px;
+min-height: fit-content;
 
 }
 
+.correct-incorrect{
+    background-color: blue;
+}
 button {
 background-color: blue;
 
