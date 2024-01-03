@@ -20,7 +20,9 @@ const questionSec = document.getElementById("question-sec")
 const CorrectBox = document.getElementById("correct-incorrect")
 const Timer = document.getElementById("Timer")
 const HighScore = document.getElementById("highscore")
+const questionTitle = document.getElementById("questionTitle")
 //const Correct = alert("That's Right")
+
 //const Incorrect = alert( "Nope!")
 
 let timeLeft = 120; 
@@ -79,6 +81,12 @@ let questions = [
  function endQuiz() {
   console.log ("end quiz")
  }
+
+function displayQuestion() {
+    questionTitle.textContent = questions [questionIndex].question;
+}
+
+
   const start = ()=> { 
     console.log ("game is starting")
     document.querySelector(".start-div").setAttribute("style","display:none")
@@ -86,6 +94,7 @@ let questions = [
     //document.querySelector(".timer").textContent = setInterval
     timerId = setInterval(oneSecondHandler, 1000);
     Timer.textContent = timeLeft;
+    displayQuestion ();
 }
    document.getElementById("start-button").addEventListener("click", start);
  
