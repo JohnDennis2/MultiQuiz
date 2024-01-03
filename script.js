@@ -15,15 +15,23 @@ const questionSec = document.querySelector(".question-sec")
 const CorrectBox = document.querySelector(".correct-incorrect")
 const Timer = document.querySelector(".Timer")
 const HighScore = document.querySelector(".highscore")
+const Correct = "That's Right"
+const Incorrect = "Nope!"
+
 
 function start () {
-    onclick.
+    alert("hello")
+
 }
+    
+    
+   
+
 
 let questions = [
     {
         Number: 1
-        question: "What does a # mean in HTML?",
+        ,question: "What does a # mean in HTML?",
         answer: "The element ID",
         choices: [
             "Its a number",
@@ -35,19 +43,19 @@ let questions = [
     }
         {
             Number: 2
-            question: "What is a P tag?",
+            ,question: "What is a P tag?",
             answer: "The paragraph element tag",
             choices: [
                 "A spraypaint object",
                 "The property symbol",
-                "An adjective for party function",
+                "The paragraph element tag",
                 "A function named Property",
     
             ]
     }
     {
         Number: 3
-        question: "What is javascript?",
+        ,question: "What is javascript?",
         answer: "A programming language",
         choices: [
             "A coffe bar",

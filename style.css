@@ -20,12 +20,13 @@ div { background-color: azure;
 
 background-color: lightslategrey;
 margin: 20px;
-min-height: fit-content;
+height: 80px;
 
 }
 
 .correct-incorrect{
     background-color: blue;
+    margin: 80px;
 }
 button {
 background-color: blue;
@@ -38,13 +39,17 @@ background-color: blue;
     
 }
 
-.main-div {
+.start-div {
     background-color: sandybrown;
     border: 18px;
     padding: 18px;
     width: auto;
-    height: 80px;
+    height: auto;
     margin-top:100px;
 }
 
+.userInput {
+    background-color: darkseagreen;
+    margin: 80px;
+}
 
