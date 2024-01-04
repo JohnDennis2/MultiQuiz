@@ -85,36 +85,34 @@ let questions = [
   console.log ("end quiz")
  }
 
- function correctAnswer = ()=> {
-    document.getElementById("first").addEventListener("click",correctAnswer)
-    if (first === answer) {
-        const Correct = alert("That's Right")
-        (displayQuestion + 1)
-    } else if {
-        const Incorrect = alert( "Nope!")
+ const correctAnswer = () => {
+    
+    const Incorrect = alert( "Nope!")
+    const correct = alert("That's Right")
+
+
+    if (first===answer) {
+         const correct = alert("That's Right")
+    } else  {
+       const Incorrect = alert( "Nope!")
     }
-    document.getElementById("second").addEventListener("click",correctAnswer)
-    if (first === answer) {
-        const Correct = alert("That's Right")
-        (displayQuestion + 1)
-    } else if {
-        const Incorrect = alert( "Nope!")
+    if (second === answer) {
+     alert("That's Right")
+        } else  {
+        alert( "Nope!")
     }
-    document.getElementById("third").addEventListener("click",correctAnswer)
-    if (first === answer) {
-        const Correct = alert("That's Right")
-        (displayQuestion + 1)
-    } else if {
-        const Incorrect = alert( "Nope!")
-    }
-    document.getElementById("fourth").addEventListener("click",correctAnswer)
-    if (first === answer) {
-        const Correct = alert("That's Right")
-        (displayQuestion + 1)
-    } else if {
-        const Incorrect = alert( "Nope!")
+    if (third === answer) {
+        alert("That's Right")
+     } else  {  
+ const Incorrect = alert( "Nope!")
+}
+ if (fourth === answer) {
+         alert("That's Right")
+       } else  {
+     alert( "Nope!")
     }
  }
+
 
 function displayQuestion() {
     questionTitle.textContent = questions [questionIndex].question;
@@ -122,11 +120,16 @@ function displayQuestion() {
      second.textContent=questions [questionIndex].choices[1];
      third.textContent=questions [questionIndex].choices[2];
      fourth.textContent=questions [questionIndex].choices[3];
+     document.getElementById("first").addEventListener("click",correctAnswer)
+   document.getElementById("second").addEventListener("click",correctAnswer)
+   document.getElementById("third").addEventListener("click",correctAnswer)
+   document.getElementById("fourth").addEventListener("click",correctAnswer)
 
 
+     correct()
+    }
 
-}
-
+   
 
   const start = ()=> { 
     console.log ("game is starting")
@@ -137,7 +140,8 @@ function displayQuestion() {
     Timer.textContent = timeLeft;
     displayQuestion ();
 }
+   //document.getElementById("initialBox").textContent = localStorage.length
 
-
+   
    document.getElementById("start-button").addEventListener("click", start);
  
