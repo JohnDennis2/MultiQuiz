@@ -21,12 +21,12 @@ const CorrectBox = document.getElementById("correct-incorrect")
 const Timer = document.getElementById("Timer")
 const HighScore = document.getElementById("highscore")
 const questionTitle = document.getElementById("questionTitle")
-//const Correct = alert("That's Right")
+
 const first = document.getElementById("first")
 const second = document.getElementById("second")
 const third = document.getElementById("third")
 const fourth = document.getElementById("fourth")
-//const Incorrect = alert( "Nope!")
+
 
 let timeLeft = 120; 
 let timerId; 
@@ -85,12 +85,44 @@ let questions = [
   console.log ("end quiz")
  }
 
+ function correctAnswer = ()=> {
+    document.getElementById("first").addEventListener("click",correctAnswer)
+    if (first === answer) {
+        const Correct = alert("That's Right")
+        (displayQuestion + 1)
+    } else if {
+        const Incorrect = alert( "Nope!")
+    }
+    document.getElementById("second").addEventListener("click",correctAnswer)
+    if (first === answer) {
+        const Correct = alert("That's Right")
+        (displayQuestion + 1)
+    } else if {
+        const Incorrect = alert( "Nope!")
+    }
+    document.getElementById("third").addEventListener("click",correctAnswer)
+    if (first === answer) {
+        const Correct = alert("That's Right")
+        (displayQuestion + 1)
+    } else if {
+        const Incorrect = alert( "Nope!")
+    }
+    document.getElementById("fourth").addEventListener("click",correctAnswer)
+    if (first === answer) {
+        const Correct = alert("That's Right")
+        (displayQuestion + 1)
+    } else if {
+        const Incorrect = alert( "Nope!")
+    }
+ }
+
 function displayQuestion() {
     questionTitle.textContent = questions [questionIndex].question;
      first.textContent=questions [questionIndex].choices[0];
      second.textContent=questions [questionIndex].choices[1];
      third.textContent=questions [questionIndex].choices[2];
      fourth.textContent=questions [questionIndex].choices[3];
+
 
 
 }
@@ -105,5 +137,7 @@ function displayQuestion() {
     Timer.textContent = timeLeft;
     displayQuestion ();
 }
+
+
    document.getElementById("start-button").addEventListener("click", start);
  
