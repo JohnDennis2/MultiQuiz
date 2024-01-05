@@ -101,9 +101,11 @@ let questions =
     //}
     
 //}
-const optionSelected = () => {
+  const optionSelected = (event)=> {
+
 
 if (first.textContent === [questions].answer) {
+
     alert("That's Right")
   } else  {
   alert( "Nope!")
@@ -124,7 +126,7 @@ if (first.textContent === [questions].answer) {
   alert( "Nope!")
   }
 
-    questionIndex = 0 ; questionIndex < questions.length ; questionIndex++
+ //for ( var i = 0; i < questionIndex.length; i++)
 }
   
   
@@ -140,9 +142,7 @@ function displayQuestion() {
    document.getElementById("third").addEventListener("click",optionSelected)
    document.getElementById("fourth").addEventListener("click",optionSelected)
 
-
-
-    }
+}
 
    
 
@@ -158,7 +158,7 @@ function displayQuestion() {
    //document.getElementById("initialBox").textContent = localStorage.length
 const highscore = ()=> {
 console.log ("button works")
-
+let highscore = userInput
 }
    
    document.getElementById("start-button").addEventListener("click", start);
