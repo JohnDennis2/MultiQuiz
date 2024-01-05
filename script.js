@@ -158,7 +158,7 @@ function displayQuestion() {
    //document.getElementById("initialBox").textContent = localStorage.length
 const highscore = ()=> {
 console.log ("button works")
-let highscore = userInput
+localStorage.setItem.textContent
 }
    
    document.getElementById("start-button").addEventListener("click", start);
