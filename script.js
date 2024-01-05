@@ -101,18 +101,33 @@ let questions =
     //}
     
 //}
-function optionSelected(answer) {
+const optionSelected = () => {
 
-    let userAnswer = answer.textContent
-    let correctAnswer = questions.answer
-     if (userAnswer === correctAnswer) {
-     alert( "correct")
-     }
-    else {
-        alert("nope")
-    }
-    
+if (first.textContent === [questions].answer) {
+    alert("That's Right")
+  } else  {
+  alert( "Nope!")
+  }
+  if (second.textContent === [questions].answer) {
+  alert("That's Right")
+  } else  {
+   alert( "Nope!")
+  }
+  if (third.textContent === [questions].answer) {
+  alert("That's Right")
+  } else  {  
+  alert( "Nope!")
+  }
+  if (fourth.textContent === [questions].answer) {
+   alert("That's Right")
+  } else  {
+  alert( "Nope!")
+  }
+
+    questionIndex = 0 ; questionIndex < questions.length ; questionIndex++
 }
+  
+  
 
 function displayQuestion() {
     questionTitle.textContent = questions [questionIndex].question;
@@ -126,7 +141,7 @@ function displayQuestion() {
    document.getElementById("fourth").addEventListener("click",optionSelected)
 
 
- questionIndex++
+
     }
 
    
@@ -143,6 +158,7 @@ function displayQuestion() {
    //document.getElementById("initialBox").textContent = localStorage.length
 const highscore = ()=> {
 console.log ("button works")
+
 }
    
    document.getElementById("start-button").addEventListener("click", start);
