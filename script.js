@@ -32,12 +32,14 @@ let timeLeft = 120;
 let timerId; 
 let questionIndex = 0;
  
-let questions = [
+
+let questions = 
+[
     {
-        Number: 1
-        ,question: "What does a # mean in HTML?",
-        answer: "The element ID",
-        choices: [
+        
+        question: "What does a # mean in HTML?",
+        answer: choices[1]
+        ,choices: [
             "Its a number",
             "The element ID",
             "A telephone number",
@@ -46,9 +48,9 @@ let questions = [
         ]
     }
         ,{
-            Number: 2
-            ,question: "What is a P tag?",
-            answer: "The paragraph element tag",
+          
+            question: "What is a P tag?",
+            answer: 2,
             choices: [
                 "A spraypaint object",
                 "The property symbol",
@@ -58,10 +60,10 @@ let questions = [
             ]
     }
     ,{
-        Number: 3
-        ,question: "What is javascript?",
-        answer: "A programming language",
-        choices: [
+      
+        question: "What is javascript?",
+        answer: 1
+        ,choices: [
             "A coffe bar",
             "A programming language",
             "A program to write novels",
@@ -90,27 +92,13 @@ let questions = [
 
  const correctAnswer = () => {
 
-    if (first.textContent === [questions].answer) {
+    if (first.textContent === [questions].num[1].choices.answer) {
           alert("That's Right")
     } else  {
        alert( "Nope!")
     }
-    if (second.textContent === [questions].answer) {
-     alert("That's Right")
-        } else  {
-         alert( "Nope!")
-    }
-    if (third.textContent === [questions].answer) {
-        alert("That's Right")
-     } else  {  
-  alert( "Nope!")
+    
 }
- if (fourth.textContent === [questions].answer) {
-         alert("That's Right")
-       } else  {
-     alert( "Nope!")
-    }
- }
 
 
 function displayQuestion() {
