@@ -28,6 +28,8 @@ const third = document.getElementById("third")
 const fourth = document.getElementById("fourth")
 
 
+
+
 let timeLeft = 120; 
 let timerId; 
 let questionIndex = 0;
@@ -38,7 +40,7 @@ let questions =
     {
         
         question: "What does a # mean in HTML?",
-        answer: choices[1]
+        answer: "The element ID"
         ,choices: [
             "Its a number",
             "The element ID",
@@ -50,8 +52,8 @@ let questions =
         ,{
           
             question: "What is a P tag?",
-            answer: 2,
-            choices: [
+            answer: "The paragraph element tag"
+            ,choices: [
                 "A spraypaint object",
                 "The property symbol",
                 "The paragraph element tag",
@@ -62,7 +64,7 @@ let questions =
     ,{
       
         question: "What is javascript?",
-        answer: 1
+        answer: "A programming language"
         ,choices: [
             "A coffe bar",
             "A programming language",
@@ -90,16 +92,27 @@ let questions =
 
 
 
- const correctAnswer = () => {
+ //function correctAnswer (userAnswer)  {
 
-    if (first.textContent === [questions].num[1].choices.answer) {
-          alert("That's Right")
-    } else  {
-       alert( "Nope!")
+   // if (first.userAnswer === correct) {
+   //       alert("That's Right")
+   // } else  {
+   //    alert( "Nope!")
+    //}
+    
+//}
+function optionSelected(answer) {
+
+    let userAnswer = answer.textContent
+    let correctAnswer = questions.answer
+     if (userAnswer === correctAnswer) {
+     alert( "correct")
+     }
+    else {
+        alert("nope")
     }
     
 }
-
 
 function displayQuestion() {
     questionTitle.textContent = questions [questionIndex].question;
@@ -107,10 +120,10 @@ function displayQuestion() {
      second.textContent=questions [questionIndex].choices[1];
      third.textContent=questions [questionIndex].choices[2];
      fourth.textContent=questions [questionIndex].choices[3];
-     document.getElementById("first").addEventListener("click",correctAnswer)
-   document.getElementById("second").addEventListener("click",correctAnswer)
-   document.getElementById("third").addEventListener("click",correctAnswer)
-   document.getElementById("fourth").addEventListener("click",correctAnswer)
+     document.getElementById("first").addEventListener("click",optionSelected)
+   document.getElementById("second").addEventListener("click",optionSelected)
+   document.getElementById("third").addEventListener("click",optionSelected)
+   document.getElementById("fourth").addEventListener("click",optionSelected)
 
 
  questionIndex++
