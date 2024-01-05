@@ -83,30 +83,29 @@ let questions = [
 
  function endQuiz() {
   console.log ("end quiz")
+  clearInterval
  }
 
+
+
  const correctAnswer = () => {
-    
-    const Incorrect = alert( "Nope!")
-    const correct = alert("That's Right")
 
-
-    if (first===answer) {
-         const correct = alert("That's Right")
+    if (first.textContent === [questions].answer) {
+          alert("That's Right")
     } else  {
-       const Incorrect = alert( "Nope!")
+       alert( "Nope!")
     }
-    if (second === answer) {
+    if (second.textContent === [questions].answer) {
      alert("That's Right")
         } else  {
-        alert( "Nope!")
+         alert( "Nope!")
     }
-    if (third === answer) {
+    if (third.textContent === [questions].answer) {
         alert("That's Right")
      } else  {  
- const Incorrect = alert( "Nope!")
+  alert( "Nope!")
 }
- if (fourth === answer) {
+ if (fourth.textContent === [questions].answer) {
          alert("That's Right")
        } else  {
      alert( "Nope!")
@@ -126,7 +125,7 @@ function displayQuestion() {
    document.getElementById("fourth").addEventListener("click",correctAnswer)
 
 
-     correct()
+ questionIndex++
     }
 
    
@@ -141,7 +140,9 @@ function displayQuestion() {
     displayQuestion ();
 }
    //document.getElementById("initialBox").textContent = localStorage.length
-
+const highscore = ()=> {
+console.log ("button works")
+}
    
    document.getElementById("start-button").addEventListener("click", start);
- 
+ document.getElementById("highscore").addEventListener("click", highscore)
