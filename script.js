@@ -101,30 +101,35 @@ let questions =
     //}
     
 //}
-  const optionSelected = (event)=> {
+function  optionSelected (event) {
+ 
 
-
-if (first.textContent === [questions].answer) {
+if ( event.target.textContent === questions[questionIndex].answer) {
 
     alert("That's Right")
   } else  {
   alert( "Nope!")
   }
-  if (second.textContent === [questions].answer) {
-  alert("That's Right")
-  } else  {
-   alert( "Nope!")
-  }
-  if (third.textContent === [questions].answer) {
-  alert("That's Right")
-  } else  {  
-  alert( "Nope!")
-  }
-  if (fourth.textContent === [questions].answer) {
-   alert("That's Right")
-  } else  {
-  alert( "Nope!")
-  }
+questionIndex++
+
+displayQuestion()
+
+
+//  if (second.textContent === questions[questionIndex].answer) {
+//  alert("That's Right")
+//   } else  {
+//    alert( "Nope!")
+//   }
+//   if (third.textContent === questions[questionIndex].answer) {
+//   alert("That's Right")
+//   } else  {  
+//   alert( "Nope!")
+//   }
+//   if (fourth.textContent === questions[questionIndex].answer) {
+//    alert("That's Right")
+//   } else  {
+//   alert( "Nope!")
+//   }
 
  //for ( var i = 0; i < questionIndex.length; i++)
 }
@@ -149,6 +154,7 @@ function displayQuestion() {
   const start = ()=> { 
     console.log ("game is starting")
     document.querySelector(".start-div").setAttribute("style","display:none")
+    //document.querySelector(".question-sec").setAttribute("style","display:none")
     //document.querySelector(".questions-sec").textContent = questions
     //document.querySelector(".timer").textContent = setInterval
     timerId = setInterval(oneSecondHandler, 1000);
